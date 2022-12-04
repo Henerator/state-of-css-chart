@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State of CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div class="gratitude">
+      Inspired by
+      <a href="https://2021.stateofcss.com/en-US/technologies/css-frameworks" target="_blank">The State of CSS</a>
+    </div>
+
+    <div class="controls">
+      <button class="button active" data-type="satisfaction">Satisfaction</button>
+      <button class="button" data-type="interest">Interest</button>
+      <button class="button" data-type="usage">Usage</button>
+      <button class="button" data-type="awarness">Awarness</button>
+    </div>
+    <div id="chart-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+:root {
+  --color-bg: rgb(39, 35, 37);
+  --color-text: rgb(250, 250, 250);
+  --color-axis-line: rgb(221, 221, 221);
+  --color-circle-shadow: rgb(0, 0, 0);
+  --color-control-border: rgb(250, 250, 250);
+  --color-control-text-hover: rgb(239, 78, 136);
+  --color-control-active-bg: rgb(62, 48, 54);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+html {
+  font-size: 1.125rem;
+  font-family: 'IBM Plex Mono', monospace, 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.gratitude {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 12px;
+  color: var(--color-text);
+  font-size: 12px;
+}
+
+.gratitude a {
+  color: var(--color-text);
+}
+
+.controls {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: block;
+  padding: 8px 12px;
+  font-weight: 600;
+  text-align: center;
+  color: inherit;
+  background-color: var(--color-bg);
+  border: 1px dashed var(--color-control-border);
+  transition: all 300ms ease-out;
+  cursor: pointer;
+}
+
+.button:not(:last-child) {
+  border-right-width: 0;
+}
+
+.button:hover {
+  border-style: solid;
+  border-top-color: var(--color-control-text-hover);
+  border-bottom-color: var(--color-control-text-hover);
+  color: var(--color-control-text-hover);
+}
+
+.button.active {
+  pointer-events: none;
+  border-style: solid;
+  cursor: default;
+  background-color: var(--color-control-active-bg);
+}
